@@ -1,0 +1,144 @@
+.email_sig_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+    max-width: 100%;
+}
+.form_settings {
+    flex: 1 1 50%;
+}
+.columnHeading {
+    font-size: 18px;
+    font-weight: bold;
+}
+.inputLine {
+    display: flex;
+    justify-content: flex-start;
+}
+.inputLine input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 14px;
+    flex: 0 0 auto;
+}
+.inputLine1 {
+    flex: 1 1 auto;
+    text-align: center;
+}
+.inputLine1 label {
+    text-align: left;
+}
+.subtitle {
+    font-style: italic;
+    font-size: 14px;
+}
+#inputForm {
+    margin: 0 0 50px;
+    padding: 0 0 30px 0;
+    border-right: 0;
+    border-bottom: 1px dashed #939598;
+    
+}
+
+#signatureColumn {
+    max-width: 100%;
+    padding: 0;
+    
+}
+
+.copySignature {
+    cursor: pointer;
+    margin: 0 0 30px;
+    font-size: 14px;
+}
+label {
+    display: block;
+    margin: 10px 0 2px 5px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+form input[type='text'], form input[type='tel'], form input[type='email'], form input[type='url'],
+form select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+form input[type='checkbox'] {
+    outline-width: 0;
+}
+
+.noInput {
+    margin-top: 20px;
+}
+.noInput label{
+    margin-top: 0;
+}
+
+.emailField, .phoneField, .mobileField, .urlField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.squareBtn {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 10px 5px;
+}
+.squareBtn.add {
+    margin: 0;
+}
+.squareBtn:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+:where(.wp-site-blocks *:focus){outline-width:0;outline-style:solid}
+
+.addField {
+    background: #333333;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 3px 10px;
+    margin: 0 auto 10px;
+    font-size: 13px;
+}
+.addField:hover {
+    background-color: #6d6d6d;
+    cursor: pointer;
+}
+.addField img {
+    width: 10px;
+    height: auto;
+    margin-right: 5px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .email_sig_wrapper {
+        flex-direction: row;
+    }
+
+    #inputForm {
+        padding: 0 40px 30px 0;
+        border-right: 1px dashed #939598;
+        border-bottom: 0;
+        flex: 1 1 25%;
+    }
+
+    #signatureColumn {
+        max-width: 100%;
+        padding: 0 0 0 40px;
+        flex: 1 1 75%;
+    }
+}
