@@ -61,7 +61,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/fivestar_franchising.png',
                     style: 'max-width: 220px'
                 });
-                iconFolder = 'red';
+                iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
                 break;
 
@@ -70,7 +70,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/five-star-marketing-logo.png',
                     style: 'max-width: 220px'
                 });
-                iconFolder = 'red';
+                iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
                 break;
 
@@ -79,7 +79,25 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-logo.png',
                     style: 'max-width: 204px'
                 });
-                iconFolder = 'orange';
+                iconFolder = 'bio-one';
+                jQuery('#displayName').css('color', '#f26a3d');
+                break;
+
+            case 'Bio-One-Tagline':
+                jQuery('#brandLogo').attr({
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-tagline.png',
+                    style: 'max-width: 204px'
+                });
+                iconFolder = 'bio-one';
+                jQuery('#displayName').css('color', '#f26a3d');
+                break;
+
+            case 'Bio-One-Blue':
+                jQuery('#brandLogo').attr({
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-blue.png',
+                    style: 'max-width: 204px'
+                });
+                iconFolder = 'bio-one-blue';
                 jQuery('#displayName').css('color', '#f26a3d');
                 break;
 
@@ -88,7 +106,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/mosquito-shield-logo.png',
                     style: 'max-width: 194px'
                 });
-                iconFolder = 'red1';
+                iconFolder = 'mosquito-shield';
                 jQuery('#displayName').css('color', '#cb171e');
                 break;
 
@@ -97,7 +115,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/five-star-bath-solutions-logo.png',
                     style: 'max-width: 194px'
                 });
-                iconFolder = 'blue2';
+                iconFolder = 'fsb';
                 jQuery('#displayName').css('color', '#1c93d1');
                 break;
 
@@ -106,7 +124,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/packouts-logo.png',
                     style: 'max-width: 189px'
                 });
-                iconFolder = 'blue';
+                iconFolder = 'packouts';
                 jQuery('#displayName').css('color', '#0076cf');
                 break;
 
@@ -115,7 +133,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/gotcha-covered-logo.png',
                     style: 'max-width: 212px'
                 });
-                iconFolder = 'blue3';
+                iconFolder = 'gotcha-covered';
                 jQuery('#displayName').css('color', '#2591d0');
                 break;
 
@@ -124,7 +142,7 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/card-my-yard-logo1.png',
                     style: 'max-width: 220px'
                 });
-                iconFolder = 'green';
+                iconFolder = 'card-my-yard';
                 jQuery('#displayName').css('color', '#40b44a');
                 break;
 
@@ -133,13 +151,13 @@ jQuery(function () {
                     src: thisDomain + '/wp-content/plugins/email-signature-generator/images/pronexis-logo.png',
                     style: 'max-width: 220px'
                 });
-                iconFolder = 'blue1';
+                iconFolder = 'pronexis';
                 jQuery('#displayName').css('color', '#2591d0');
                 break;
 
             default:
                 console.log('image not updated');
-                iconFolder = 'red';
+                iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
                 break;
 
@@ -155,14 +173,21 @@ jQuery(function () {
         jQuery('#xIcon').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/' + iconFolder + '/x.png');
         jQuery('#instagramIcon').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/' + iconFolder + '/instagram.png');
         jQuery('#facebookIcon').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/' + iconFolder + '/facebook.png');
+        jQuery('#youtubeIcon').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/' + iconFolder + '/youtube.png');
 
-        if (this.value === 'Bio-One' || this.value === 'Card-My-Yard') {
+        // Use black Drive banner
+        const blackArr = ['Bio-One', 'Bio-One-Blue', 'Card-My-Yard', 'Bio-One-Tagline'];
+        if (blackArr.includes(this.value)) {
             jQuery('#driveBanner').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/drive-black.png');
         } else {
             jQuery('#driveBanner').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/drive.png');
         }
 
     });
+
+    const addHttps = (url) => {
+        return url.includes('http') ? url : 'https://' + url;
+    };
 
     // Update signature display
     jQuery('#inputName').keyup(function () {
@@ -198,29 +223,29 @@ jQuery(function () {
     });
 
     jQuery('#inputAppointment').keyup(function () {
-        jQuery('#displayAppointment a').attr('href', this.value);
+        jQuery('#displayAppointment a').attr('href', addHttps(this.value));
     });
 
     jQuery('#inputConnectOnLi').keyup(function () {
-        jQuery('#displayConnectOnLi a').attr('href', this.value);
+        jQuery('#displayConnectOnLi a').attr('href', addHttps(this.value));
     });
 
 
     // Social Icons
     jQuery('#inputLinkedin').keyup(function () {
-        jQuery('#rowLinkedin a').attr('href', this.value);
+        jQuery('#rowLinkedin a').attr('href', addHttps(this.value));
     });
 
     jQuery('#inputX').keyup(function () {
-        jQuery('#rowX a').attr('href', this.value);
+        jQuery('#rowX a').attr('href', addHttps(this.value));
     });
 
     jQuery('#inputInstagram').keyup(function () {
-        jQuery('#rowInstagram a').attr('href', this.value);
+        jQuery('#rowInstagram a').attr('href', addHttps(this.value));
     });
 
     jQuery('#inputFacebook').keyup(function () {
-        jQuery('#rowFacebook a').attr('href', this.value);
+        jQuery('#rowFacebook a').attr('href', addHttps(this.value));
     });
 
     // Toggle display fields
@@ -309,13 +334,34 @@ jQuery(function () {
         updateMobile();
     });
 
-    function copyElementToClipboard(element) {
+    async function copyElementToClipboard(element) {
+        let text = document.getElementById(element).innerHTML;
+        text = text.replace(/\s+/g, ' ').trim();
+
+
         window.getSelection().removeAllRanges();
         let range = document.createRange();
         range.selectNode(typeof element === 'string' ? document.getElementById(element) : element);
         window.getSelection().addRange(range);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
+
+
+        // const html = `<div><div class="fsf">fsf </div>${text}</div>`;
+
+        // const clipboardItem = new ClipboardItem({
+        //     "text/html": new Blob([html], { type: "text/html" }),
+        //     "text/plain": new Blob([text], { type: "text/plain" })
+        // });
+
+        // console.log(clipboardItem);
+
+        // try {
+        //     await navigator.clipboard.write([clipboardItem]);
+        //     console.log('Content copied to clipboard');
+        // } catch (err) {
+        //     console.error('Failed to copy: ', err);
+        // }
     }
 
     jQuery('.copySignature').on('click', () => {

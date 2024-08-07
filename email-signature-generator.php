@@ -2,14 +2,13 @@
 /*
 * Plugin Name: Email Signature Generator
 * Description: Generate an email signature for any of Five Star Franchising's brands
-* Version: 1.03.05
+* Version: 1.04.09
 * Requires at least: 5.2
 * Requires PHP: 7.2
 * Author: Dave Barrington
 * Author URI: dave-barrington@hotmail.com
 * License: GPL v2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
-* Update URI: https://example.com/my-plugin/
 * Text Domain: email-signature-generator
 * Domain Path: /languages
 */
@@ -57,6 +56,8 @@ function form_plugin_form_shortcode()
                             <option value="five-star-franchising" selected>Five Star Franchising</option>
                             <option value="five-star-marketing">Five Star Marketing</option>
                             <option value="Bio-One">Bio-One</option>
+                            <option value="Bio-One-Tagline">Bio-One Tagline</option>
+                            <option value="Bio-One-Blue">Bio-One Blue</option>
                             <option value="Mosquito-Shield">Mosquito Shield</option>
                             <option value="Five-Star-Bath-Solutions">Five Star Bath Solutions</option>
                             <option value="1-800-Packouts">1-800-Packouts</option>
@@ -77,7 +78,7 @@ function form_plugin_form_shortcode()
                             <div class="phoneField"><input type="tel" class="phoneNumber" id="inputPhone0" name="inputPhone0"></div>
                         </div>
                         <button class="addField" id="addPhoneBtn"><img src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/add_field.svg" /><span class="btnText">Add Another Field</span></button>
-                        <!-- <img id="addPhoneBtn" class="squareBtn add" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/plus_sign.svg" /> -->
+
                     </div>
                 </div>
 
@@ -90,7 +91,7 @@ function form_plugin_form_shortcode()
                             <div class="mobileField"><input type="tel" class="phoneNumber" id="inputMobile0" name="inputMobile0"></div>
                         </div>
                         <button class="addField" id="addMobileBtn"><img src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/add_field.svg" /><span class="btnText">Add Another Field</span></button>
-                        <!-- <img id="addMobileBtn" class="squareBtn add" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/plus_sign.svg" /> -->
+
                     </div>
                 </div>
 
@@ -103,7 +104,7 @@ function form_plugin_form_shortcode()
                             <div class="emailField"><input type="email" id="inputEmail0" name="inputEmail0" /></div>
                         </div>
                         <button class="addField" id="addEmailBtn"><img src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/add_field.svg" /><span class="btnText">Add Another Field</span></button>
-                        <!-- <img id="addEmailBtn" class="squareBtn add" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/plus_sign.svg" /> -->
+
                     </div>
                 </div>
 
@@ -131,7 +132,7 @@ function form_plugin_form_shortcode()
                             <div class="urlField"><input type="url" id="inputUrl0" name="inputUrl0"></div>
                         </div>
                         <button class="addField" id="addUrlBtn"><img src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/add_field.svg" /><span class="btnText">Add Another Field</span></button>
-                        <!-- <img id="addUrlBtn" class="squareBtn add" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/plus_sign.svg" /> -->
+
                     </div>
                 </div>
 
@@ -178,54 +179,52 @@ function form_plugin_form_shortcode()
             </form>
         </div>
         <div id="signatureColumn" style="font-family: Arial, Helvetica, sans-serif; line-height:1.3;">
-            <button class="copySignature">Copy to clipboard</button>
+            <!-- <button class="copySignature">Copy to clipboard</button> -->
             <div id="signature">
                 <div id="displayName" style="font-size: 16px;  font-weight: bold; letter-spacing: 2px; color: #ab080d; text-transform: uppercase;">First Lastname</div>
                 <div id="rowPosition" style="font-size: 14px; font-style:italic; font-weight: bold">Position</div>
-                <div style="margin: 18px 0 14px;">
-                    <img id="brandLogo" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fivestar_franchising.png" style="width: 100%; max-width: 220px;" />
-                </div>
+                <div style="margin: 18px 0 14px;"><img id="brandLogo" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fivestar_franchising.png" style="width: 100%; max-width: 220px;" /></div>
                 <table cellpadding="0" cellspacing="0" style="margin: 0 0 6px;">
                     <tr id="rowPhone">
-                        <td style="width: 16px; height: 16px; vertical-align:middle;"><img id="phoneIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/phone.png" style="vertical-align: middle; margin: 0 auto;width: 100%; max-width: 15px;" /></td>
+                        <td style="width: 16px; height: 16px; vertical-align:middle;"><img id="phoneIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/phone.png" style="vertical-align: middle; margin: 0 auto;width: 100%; max-width: 15px;" /></td>
                         <td id="displayPhone" style="height: 16px; vertical-align:middle; font-size: 12px; padding-left: 10px;"><a href="tel:123.456.7890" style="color: #000">123.456.7890</a></td>
                     </tr>
                     <tr id="rowMobile">
-                        <td style="width: 16px; height: 17px; vertical-align:middle; text-align:center"><img id="mobileIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/mobile.png" style="vertical-align: middle;width: 100%; max-width: 12px;" /></td>
+                        <td style="width: 16px; height: 17px; vertical-align:middle; text-align:center"><img id="mobileIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/mobile.png" style="vertical-align: middle;width: 100%; max-width: 12px;" /></td>
                         <td id="displayMobile" style=" height: 17px; vertical-align:middle; font-size: 12px; padding-left: 10px;"><a href="#" style="color: #000">123.456.7890</a> | <a href="#" style="color: #000">123.456.7890</a></td>
                     </tr>
                     <tr id="rowEmail">
-                        <td style="width: 16px; height: 12px; vertical-align:middle;"><img id="mailIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/mail.png" style="vertical-align: middle;width: 100%; max-width: 16px;" /></td>
+                        <td style="width: 16px; height: 12px; vertical-align:middle;"><img id="mailIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/mail.png" style="vertical-align: middle;width: 100%; max-width: 16px;" /></td>
                         <td id="displayEmail" style="height: 12px; vertical-align:middle; font-size: 12px; padding-left: 10px;"><a href="#" style="color: #000">name@brand.com</a></td>
                     </tr>
                     <tr id="rowAppointment">
-                        <td style="width: 16px; height: 15px; vertical-align:middle;"><img id="calendarIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/calendar.png" style="vertical-align: middle;width: 100%; max-width: 14px;" /></td>
+                        <td style="width: 16px; height: 15px; vertical-align:middle;"><img id="calendarIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/calendar.png" style="vertical-align: middle;width: 100%; max-width: 14px;" /></td>
                         <td id="displayAppointment" style="height: 15px; vertical-align:middle; font-size: 12px; padding-left: 10px;"><a href="#" target="_blank" style="color: #000">Book an Appointment</a></td>
                     </tr>
                     <tr id="rowConnectOnLi">
-                        <td style="width: 16px; height: 14px; vertical-align:middle;"><img id="connectLiIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/linkedin_1.png" style="vertical-align: middle;width: 100%; max-width: 14px;" /></td>
+                        <td style="width: 16px; height: 14px; vertical-align:middle;"><img id="connectLiIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/linkedin_1.png" style="vertical-align: middle;width: 100%; max-width: 14px;" /></td>
                         <td id="displayConnectOnLi" style="height: 14px; vertical-align:middle; font-size: 12px; padding-left: 10px;"><a href="#" target="_blank" style="color: #000">Connect on Linkedin</a></td>
                     </tr>
                     <tr id="rowUrl">
-                        <td style="width: 16px; height: 14px; vertical-align:middle;"><img id="urlIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/url.png" style="vertical-align: middle; width: 100%; max-width: 15px;" /></td>
+                        <td style="width: 16px; height: 14px; vertical-align:middle;"><img id="urlIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/url.png" style="vertical-align: middle; width: 100%; max-width: 15px;" /></td>
                         <td id="displayUrl" style="height: 14px; vertical-align:middle; font-size: 12px; padding-left: 10px;"><a href="#" style="color: #000">Brand.com</a></td>
                     </tr>
                 </table>
                 <table cellpadding="0" cellspacing="0" style="margin: 0 0 15px;">
                     <tr>
-                        <td id="rowX" style="width: 34px;"><a href="https://x.com/FiveStarFran" target="_blank"><img id="xIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/x.png" style="width: 100%; max-width: 17px;" /></a></td>
-                        <td id="rowInstagram" style="width: 34px;"><a href="https://www.instagram.com/explore/locations/268247198/five-star-franchising" target="_blank"><img id="instagramIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/instagram.png" style="width: 100%; max-width: 17px;" /></a></td>
-                        <td id="rowFacebook" style="width: 34px;"><a href="https://www.facebook.com/FiveStarFranchise/" target="_blank"><img id="facebookIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/facebook.png" style="width: 100%; max-width: 17px;" /></a></td>
-                        <td id="rowLinkedin" style="width: 34px;"><a href="https://www.linkedin.com/company/five-star-franchising" target="_blank"><img id="linkedinIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/red/linkedin.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowX" style="width: 34px;"><a href="https://x.com/FiveStarFran" target="_blank"><img id="xIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/x.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowInstagram" style="width: 34px;"><a href="https://www.instagram.com/fivestarfranchising/" target="_blank"><img id="instagramIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/instagram.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowFacebook" style="width: 34px;"><a href="https://www.facebook.com/FiveStarFranchise/" target="_blank"><img id="facebookIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/facebook.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowLinkedin" style="width: 34px;"><a href="https://www.linkedin.com/company/five-star-franchising" target="_blank"><img id="linkedinIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/linkedin.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowYoutubeIcon" style="width: 34px;"><a href="https://www.youtube.com/@fivestarfranchising" target="_blank"><img id="youtubeIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/youtube.png" style="width: 100%; max-width: 17px;" /></a></td>
                     </tr>
                 </table>
-                <div style="margin: 0 0 16px"><img id="driveBanner" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/drive.png" style="width: 100%; max-width: 600px;" /></div>
-                <div id="rowDisclaimer" style="padding: 20px 0; border-top: #939598 1px solid; color: #808285; font-size: 10px; width: 600px; max-width: 100%;">This e-mail and any files transmitted with it are confidential and are intended solely for the use of the individual or entity to which they are addressed. If you are not the intended recipient or the person responsible for delivering the e-mail to the intended recipient, be advised that you have received this e-mail in error. You should delete this message and are hereby notified that any use, dissemination, forwarding, printing, or copying of this e-mail is strictly prohibited.</div>
+                <div style="margin: 0 0 16px"><img id="driveBanner" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/drive.png" style="width: 100%; max-width: 570px;" /></div>
+                <div id="rowDisclaimer" style="padding: 20px 0; border-top: #939598 1px solid; color: #808285; font-size: 10px; width: 570px; max-width: 100%;">This e-mail and any files transmitted with it are confidential and are intended solely for the use of the individual or entity to which they are addressed. If you are not the intended recipient or the person responsible for delivering the e-mail to the intended recipient, be advised that you have received this e-mail in error. You should delete this message and are hereby notified that any use, dissemination, forwarding, printing, or copying of this e-mail is strictly prohibited.</div>
             </div>
-            <button class="copySignature">Copy to clipboard</button>
+            <!-- <button class="copySignature">Copy to clipboard</button> -->
         </div>
     </div>
-
     <script>
         jQuery('document').ready(function() {
             jQuery('#brandSelect').val('five-star-franchising');
