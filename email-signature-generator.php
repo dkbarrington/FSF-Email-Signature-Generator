@@ -56,7 +56,7 @@ function form_plugin_form_shortcode()
                             <option value="five-star-franchising" selected>Five Star Franchising</option>
                             <option value="five-star-marketing">Five Star Marketing</option>
                             <option value="Bio-One">Bio-One</option>
-                            <option value="Bio-One-Tagline">Bio-One Tagline</option>
+                            <option value="Bio-One-Tagline">Bio-One Alternate Tagline</option>
                             <option value="Bio-One-Blue">Bio-One Blue</option>
                             <option value="Mosquito-Shield">Mosquito Shield</option>
                             <option value="Five-Star-Bath-Solutions">Five Star Bath Solutions</option>
@@ -168,6 +168,14 @@ function form_plugin_form_shortcode()
                     </div>
                 </div>
 
+                <div class="inputLine">
+                    <input type="checkbox" name="includeInstagram" id="includeYoutube" checked />
+                    <div class="inputLine1">
+                        <label for="inputYoutube">Youtube:</label>
+                        <input type="url" id="inputYoutube" name="inputYoutube" value="https://www.instagram.com/explore/locations/268247198/five-star-franchising">
+                    </div>
+                </div>
+
                 <div class="inputLine noInput">
                     <input type="checkbox" name="includeDisclaimer" id="includeDisclaimer" checked />
                     <div class="inputLine1">
@@ -175,11 +183,10 @@ function form_plugin_form_shortcode()
 
                     </div>
                 </div>
-
             </form>
         </div>
         <div id="signatureColumn" style="font-family: Arial, Helvetica, sans-serif; line-height:1.3;">
-            <!-- <button class="copySignature">Copy to clipboard</button> -->
+
             <div id="signature">
                 <div id="displayName" style="font-size: 16px;  font-weight: bold; letter-spacing: 2px; color: #ab080d; text-transform: uppercase;">First Lastname</div>
                 <div id="rowPosition" style="font-size: 14px; font-style:italic; font-weight: bold">Position</div>
@@ -214,15 +221,38 @@ function form_plugin_form_shortcode()
                     <tr>
                         <td id="rowX" style="width: 34px;"><a href="https://x.com/FiveStarFran" target="_blank"><img id="xIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/x.png" style="width: 100%; max-width: 17px;" /></a></td>
                         <td id="rowInstagram" style="width: 34px;"><a href="https://www.instagram.com/fivestarfranchising/" target="_blank"><img id="instagramIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/instagram.png" style="width: 100%; max-width: 17px;" /></a></td>
-                        <td id="rowFacebook" style="width: 34px;"><a href="https://www.facebook.com/FiveStarFranchise/" target="_blank"><img id="facebookIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/facebook.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowFacebook" style="width: 34px;"><a href="https://www.facebook.com/FiveStarFranchise" target="_blank"><img id="facebookIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/facebook.png" style="width: 100%; max-width: 17px;" /></a></td>
                         <td id="rowLinkedin" style="width: 34px;"><a href="https://www.linkedin.com/company/five-star-franchising" target="_blank"><img id="linkedinIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/linkedin.png" style="width: 100%; max-width: 17px;" /></a></td>
-                        <td id="rowYoutubeIcon" style="width: 34px;"><a href="https://www.youtube.com/@fivestarfranchising" target="_blank"><img id="youtubeIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/youtube.png" style="width: 100%; max-width: 17px;" /></a></td>
+                        <td id="rowYoutube" style="width: 34px;"><a href="https://www.youtube.com/@fivestarfranchising" target="_blank"><img id="youtubeIcon" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/fsf/youtube.png" style="width: 100%; max-width: 17px;" /></a></td>
                     </tr>
                 </table>
                 <div style="margin: 0 0 16px"><img id="driveBanner" src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/drive.png" style="width: 100%; max-width: 570px;" /></div>
                 <div id="rowDisclaimer" style="padding: 20px 0; border-top: #939598 1px solid; color: #808285; font-size: 10px; width: 570px; max-width: 100%;">This e-mail and any files transmitted with it are confidential and are intended solely for the use of the individual or entity to which they are addressed. If you are not the intended recipient or the person responsible for delivering the e-mail to the intended recipient, be advised that you have received this e-mail in error. You should delete this message and are hereby notified that any use, dissemination, forwarding, printing, or copying of this e-mail is strictly prohibited.</div>
             </div>
-            <!-- <button class="copySignature">Copy to clipboard</button> -->
+            <button class="addField copySignature">Add to Your Email</button>
+        </div>
+    </div>
+    <div class="modalWrapper">
+        <div class="modalContent">
+            <img src="<?php echo get_site_url(); ?>/wp-content/plugins/email-signature-generator/images/exit_1.png" id="exit" />
+            <h2>How to Add Your New Signature to Your Email</h2>
+
+            <p>All it takes is copying and pasting your new signature to your Google or Outlook signature settings.</p>
+
+            <p class="modMargin">You can find detailed instructions below:</p>
+            <ol>
+                <li>Select the entire signature and copy it</li>
+                <li>Go to your email platform of choice and go to the signature settings page</li>
+                <li>Paste the signature into the text box</li>
+                <li>Don't forget to click 'Save'</li>
+            </ol>
+
+            <p class="modMargin">If you need more guidance, click your preferred email platform below:</p>
+            <ul>
+                <li><a href="https://support.google.com/mail/answer/8395?hl=en&co=GENIE.Platform%3DDesktop" target="_blank">Gmail</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/create-and-add-an-email-signature-in-outlook-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2#PickTab=New_Outlook" target="_blank">Outlook for PC</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/create-and-insert-a-signature-in-outlook-for-mac-f4d21492-0956-4429-95ad-2769745b539c" target="_blank">Outlook for Mac</a></li>
+            </ul>
         </div>
     </div>
     <script>

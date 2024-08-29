@@ -63,6 +63,18 @@ jQuery(function () {
                 });
                 iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
+                jQuery('#inputUrl0').val('https://fivestarfranchising.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/five-star-franchising');
+                jQuery('#inputFacebook').val('https://www.facebook.com/FiveStarFranchise');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@fivestarfranchising');
+                jQuery('#inputInstagram').val('https://www.instagram.com/fivestarfranchising/');
+                jQuery('#inputX').val('https://x.com/FiveStarFran');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/five-star-franchising');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/FiveStarFranchise');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@fivestarfranchising');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/fivestarfranchising/');
+                jQuery('#rowX a').attr('href', 'https://x.com/FiveStarFran');
                 break;
 
             case 'five-star-marketing':
@@ -72,6 +84,18 @@ jQuery(function () {
                 });
                 iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
+                jQuery('#inputUrl0').val('https://fivestarmarketingservice.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/five-star-marketing-service/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/fivestarmarketingservice');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@FiveStarMarketingService');
+                jQuery('#inputInstagram').val('https://www.instagram.com/fivestarmarketingservice/');
+                jQuery('#inputX').val('https://x.com/FiveStarMktgSvc');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/five-star-marketing-service/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/fivestarmarketingservice');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@FiveStarMarketingService');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/fivestarmarketingservice/');
+                jQuery('#rowX a').attr('href', 'https://x.com/FiveStarMktgSvc');
                 break;
 
             case 'Bio-One':
@@ -81,6 +105,18 @@ jQuery(function () {
                 });
                 iconFolder = 'bio-one';
                 jQuery('#displayName').css('color', '#f26a3d');
+                jQuery('#inputUrl0').val('https://biooneinc.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/bio-one-inc/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/BioOneInc/');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@bio-one');
+                jQuery('#inputInstagram').val('https://www.instagram.com/biooneinc/');
+                jQuery('#inputX').val('https://x.com/BioOneInc');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/bio-one-inc/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/BioOneInc/');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@bio-one');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/biooneinc/');
+                jQuery('#rowX a').attr('href', 'https://x.com/BioOneInc');
                 break;
 
             case 'Bio-One-Tagline':
@@ -90,6 +126,18 @@ jQuery(function () {
                 });
                 iconFolder = 'bio-one';
                 jQuery('#displayName').css('color', '#f26a3d');
+                jQuery('#inputUrl0').val('https://biooneinc.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/bio-one-inc/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/BioOneInc/');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@bio-one');
+                jQuery('#inputInstagram').val('https://www.instagram.com/biooneinc/');
+                jQuery('#inputX').val('https://x.com/BioOneInc');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/bio-one-inc/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/BioOneInc/');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@bio-one');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/biooneinc/');
+                jQuery('#rowX a').attr('href', 'https://x.com/BioOneInc');
                 break;
 
             case 'Bio-One-Blue':
@@ -98,7 +146,19 @@ jQuery(function () {
                     style: 'max-width: 204px'
                 });
                 iconFolder = 'bio-one-blue';
-                jQuery('#displayName').css('color', '#f26a3d');
+                jQuery('#displayName').css('color', '#25a8e0');
+                jQuery('#inputUrl0').val('https://biooneinc.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/bio-one-inc/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/BioOneInc/');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@bio-one');
+                jQuery('#inputInstagram').val('https://www.instagram.com/biooneinc/');
+                jQuery('#inputX').val('https://x.com/BioOneInc');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/bio-one-inc/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/BioOneInc/');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@bio-one');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/biooneinc/');
+                jQuery('#rowX a').attr('href', 'https://x.com/BioOneInc');
                 break;
 
             case 'Mosquito-Shield':
@@ -108,6 +168,18 @@ jQuery(function () {
                 });
                 iconFolder = 'mosquito-shield';
                 jQuery('#displayName').css('color', '#cb171e');
+                jQuery('#inputUrl0').val('https://moshield.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/mosquito-shield/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/MosquitoShieldFranchiseCorp');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@mosquitoshield8169');
+                jQuery('#inputInstagram').val('https://www.instagram.com/mosquitoshieldcorp/');
+                jQuery('#inputX').val('https://x.com/mosquitoshield');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/mosquito-shield/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/MosquitoShieldFranchiseCorp');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@mosquitoshield8169');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/mosquitoshieldcorp/');
+                jQuery('#rowX a').attr('href', 'https://x.com/mosquitoshield');
                 break;
 
             case 'Five-Star-Bath-Solutions':
@@ -117,6 +189,18 @@ jQuery(function () {
                 });
                 iconFolder = 'fsb';
                 jQuery('#displayName').css('color', '#1c93d1');
+                jQuery('#inputUrl0').val('https://fivestarbathsolutions.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/bath-solutions-inc-/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/BathSolutions/');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@bathsolutionsexpert');
+                jQuery('#inputInstagram').val('https://www.instagram.com/fivestarbathsolutions/');
+                jQuery('#inputX').val('https://x.com/BathSolutions');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/bath-solutions-inc-/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/BathSolutions/');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@bathsolutionsexpert');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/fivestarbathsolutions/');
+                jQuery('#rowX a').attr('href', 'https://x.com/BathSolutions');
                 break;
 
             case '1-800-Packouts':
@@ -126,6 +210,18 @@ jQuery(function () {
                 });
                 iconFolder = 'packouts';
                 jQuery('#displayName').css('color', '#0076cf');
+                jQuery('#inputUrl0').val('https://www.1800packouts.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/1-800-packouts-corporate/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/1800PACKOUTS');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@1800packouts');
+                jQuery('#inputInstagram').val('https://www.instagram.com/1_800_packouts/');
+                jQuery('#inputX').val('https://x.com/1800packouts');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/1-800-packouts-corporate/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/1800PACKOUTS');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@1800packouts');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/1_800_packouts/');
+                jQuery('#rowX a').attr('href', 'https://x.com/1800packouts');
                 break;
 
             case 'Gotcha-Covered':
@@ -135,6 +231,18 @@ jQuery(function () {
                 });
                 iconFolder = 'gotcha-covered';
                 jQuery('#displayName').css('color', '#2591d0');
+                jQuery('#inputUrl0').val('https://www.gotchacovered.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/gotcha-covered-franchising/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/GotchaCoveredCorporate/');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@GotchaCoveredHQ');
+                jQuery('#inputInstagram').val('https://www.instagram.com/gotchacoveredcorporate/');
+                jQuery('#inputX').val('https://x.com/gotchacoveredhq');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/gotcha-covered-franchising/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/GotchaCoveredCorporate/');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@GotchaCoveredHQ');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/gotchacoveredcorporate/');
+                jQuery('#rowX a').attr('href', 'https://x.com/gotchacoveredhq');
                 break;
 
             case 'Card-My-Yard':
@@ -144,6 +252,18 @@ jQuery(function () {
                 });
                 iconFolder = 'card-my-yard';
                 jQuery('#displayName').css('color', '#40b44a');
+                jQuery('#inputUrl0').val('https://cardmyyard.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/card-my-yard/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/cardmyyard');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@cardmyyard');
+                jQuery('#inputInstagram').val('https://www.instagram.com/cardmyyard/');
+                jQuery('#inputX').val('https://x.com/CardMyYard');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/card-my-yard/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/cardmyyard');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@cardmyyard');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/cardmyyard/');
+                jQuery('#rowX a').attr('href', 'https://x.com/CardMyYard');
                 break;
 
             case 'ProNexis':
@@ -153,12 +273,36 @@ jQuery(function () {
                 });
                 iconFolder = 'pronexis';
                 jQuery('#displayName').css('color', '#2591d0');
+                jQuery('#inputUrl0').val('https://pronexis.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/pronexis/');
+                jQuery('#inputFacebook').val('https://www.facebook.com/ProNexis');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@pronexis175');
+                jQuery('#inputInstagram').val('https://www.instagram.com/pronexis/');
+                jQuery('#inputX').val('https://x.com/ProNexisInc');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/pronexis/');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/ProNexis');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@pronexis175');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/pronexis/');
+                jQuery('#rowX a').attr('href', 'https://x.com/ProNexisInc');
                 break;
 
             default:
                 console.log('image not updated');
                 iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
+                jQuery('#inputUrl0').val('https://fivestarfranchising.com/');
+                jQuery('#inputLinkedin').val('https://www.linkedin.com/company/five-star-franchising');
+                jQuery('#inputFacebook').val('https://www.facebook.com/FiveStarFranchise');
+                jQuery('#inputYoutube').val('https://www.youtube.com/@fivestarfranchising');
+                jQuery('#inputInstagram').val('https://www.instagram.com/fivestarfranchising/');
+                jQuery('#inputX').val('https://x.com/FiveStarFran');
+
+                jQuery('#rowLinkedin a').attr('href', 'https://www.linkedin.com/company/five-star-franchising');
+                jQuery('#rowFacebook a').attr('href', 'https://www.facebook.com/FiveStarFranchise');
+                jQuery('#rowYoutube a').attr('href', 'https://www.youtube.com/@fivestarfranchising');
+                jQuery('#rowInstagram a').attr('href', 'https://www.instagram.com/fivestarfranchising/');
+                jQuery('#rowX a').attr('href', 'https://x.com/FiveStarFran');
                 break;
 
         }
@@ -248,6 +392,10 @@ jQuery(function () {
         jQuery('#rowFacebook a').attr('href', addHttps(this.value));
     });
 
+    jQuery('#inputYoutube').keyup(function () {
+        jQuery('#rowYoutube a').attr('href', addHttps(this.value));
+    });
+
     // Toggle display fields
     jQuery('input[type=checkbox]').change(function () {
         const rowId = this.id.replace('include', 'row');
@@ -334,37 +482,18 @@ jQuery(function () {
         updateMobile();
     });
 
-    async function copyElementToClipboard(element) {
-        let text = document.getElementById(element).innerHTML;
-        text = text.replace(/\s+/g, ' ').trim();
-
-
-        window.getSelection().removeAllRanges();
-        let range = document.createRange();
-        range.selectNode(typeof element === 'string' ? document.getElementById(element) : element);
-        window.getSelection().addRange(range);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-
-
-        // const html = `<div><div class="fsf">fsf </div>${text}</div>`;
-
-        // const clipboardItem = new ClipboardItem({
-        //     "text/html": new Blob([html], { type: "text/html" }),
-        //     "text/plain": new Blob([text], { type: "text/plain" })
-        // });
-
-        // console.log(clipboardItem);
-
-        // try {
-        //     await navigator.clipboard.write([clipboardItem]);
-        //     console.log('Content copied to clipboard');
-        // } catch (err) {
-        //     console.error('Failed to copy: ', err);
-        // }
-    }
-
-    jQuery('.copySignature').on('click', () => {
-        copyElementToClipboard('signature');
+    // Handle Modal
+    jQuery('.addField.copySignature').on('click', function () {
+        jQuery('.modalWrapper').addClass('active');
     });
+
+    jQuery('#exit, .modalWrapper').on('click', function (e) {
+        jQuery('.modalWrapper').removeClass('active');
+    });
+
+    jQuery('.modalWrapper .modalContent').on('click', function (e) {
+        e.stopPropagation();
+    })
+
+
 });
