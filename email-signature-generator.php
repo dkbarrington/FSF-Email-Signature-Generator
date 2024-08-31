@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Email Signature Generator
 * Description: Generate an email signature for any of Five Star Franchising's brands
-* Version: 1.04.09
+* Version: 1.05.01
 * Requires at least: 5.2
 * Requires PHP: 7.2
 * Author: Dave Barrington
@@ -172,7 +172,7 @@ function form_plugin_form_shortcode()
                     <input type="checkbox" name="includeInstagram" id="includeYoutube" checked />
                     <div class="inputLine1">
                         <label for="inputYoutube">Youtube:</label>
-                        <input type="url" id="inputYoutube" name="inputYoutube" value="https://www.instagram.com/explore/locations/268247198/five-star-franchising">
+                        <input type="url" id="inputYoutube" name="inputYoutube" value="https://www.youtube.com/@fivestarfranchising">
                     </div>
                 </div>
 
