@@ -58,8 +58,7 @@ jQuery(function () {
         switch (this.value) {
             case 'five-star-franchising':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/fivestar_franchising.png',
-                    style: 'max-width: 220px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/fivestar_franchising.png'
                 });
                 iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
@@ -79,8 +78,7 @@ jQuery(function () {
 
             case 'five-star-marketing':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/five-star-marketing-logo.png',
-                    style: 'max-width: 220px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/five-star-marketing-logo.png'
                 });
                 iconFolder = 'fsf';
                 jQuery('#displayName').css('color', '#ab080d');
@@ -100,8 +98,7 @@ jQuery(function () {
 
             case 'Bio-One':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-logo.png',
-                    style: 'max-width: 204px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-logo.png'
                 });
                 iconFolder = 'bio-one';
                 jQuery('#displayName').css('color', '#f26a3d');
@@ -121,8 +118,7 @@ jQuery(function () {
 
             case 'Bio-One-Tagline':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-tagline.png',
-                    style: 'max-width: 204px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-tagline.png'
                 });
                 iconFolder = 'bio-one';
                 jQuery('#displayName').css('color', '#f26a3d');
@@ -142,8 +138,7 @@ jQuery(function () {
 
             case 'Bio-One-Blue':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-blue.png',
-                    style: 'max-width: 204px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/bio-one-blue.png'
                 });
                 iconFolder = 'bio-one-blue';
                 jQuery('#displayName').css('color', '#25a8e0');
@@ -163,8 +158,7 @@ jQuery(function () {
 
             case 'Mosquito-Shield':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/mosquito-shield-logo.png',
-                    style: 'max-width: 194px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/mosquito-shield-logo.png'
                 });
                 iconFolder = 'mosquito-shield';
                 jQuery('#displayName').css('color', '#cb171e');
@@ -184,8 +178,7 @@ jQuery(function () {
 
             case 'Five-Star-Bath-Solutions':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/five-star-bath-solutions-logo.png',
-                    style: 'max-width: 194px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/five-star-bath-solutions-logo.png'
                 });
                 iconFolder = 'fsb';
                 jQuery('#displayName').css('color', '#1c93d1');
@@ -205,8 +198,7 @@ jQuery(function () {
 
             case '1-800-Packouts':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/packouts-logo.png',
-                    style: 'max-width: 189px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/packouts-logo.png'
                 });
                 iconFolder = 'packouts';
                 jQuery('#displayName').css('color', '#0076cf');
@@ -226,8 +218,7 @@ jQuery(function () {
 
             case 'Gotcha-Covered':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/gotcha-covered-logo.png',
-                    style: 'max-width: 212px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/gotcha-covered-logo.png'
                 });
                 iconFolder = 'gotcha-covered';
                 jQuery('#displayName').css('color', '#2591d0');
@@ -247,8 +238,7 @@ jQuery(function () {
 
             case 'Card-My-Yard':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/card-my-yard-logo1.png',
-                    style: 'max-width: 220px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/card-my-yard-logo1.png'
                 });
                 iconFolder = 'card-my-yard';
                 jQuery('#displayName').css('color', '#40b44a');
@@ -268,8 +258,7 @@ jQuery(function () {
 
             case 'ProNexis':
                 jQuery('#brandLogo').attr({
-                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/pronexis-logo.png',
-                    style: 'max-width: 220px'
+                    src: thisDomain + '/wp-content/plugins/email-signature-generator/images/pronexis-logo.png'
                 });
                 iconFolder = 'pronexis';
                 jQuery('#displayName').css('color', '#2591d0');
@@ -325,6 +314,13 @@ jQuery(function () {
             jQuery('#driveBanner').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/drive-black.png');
         } else {
             jQuery('#driveBanner').attr('src', thisDomain + '/wp-content/plugins/email-signature-generator/images/drive.png');
+        }
+
+        // Hide or Show Drive banner
+        if (this.value === 'ProNexis') {
+            jQuery('#driveBanner').hide();
+        } else {
+            jQuery('#driveBanner').show();
         }
 
     });
